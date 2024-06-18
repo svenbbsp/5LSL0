@@ -43,8 +43,8 @@ def create_dataloaders(data_loc, batch_size):
     dataset_train = Fast_MRI("train", data_loc)
     dataset_test  = Fast_MRI("test" , data_loc)
     
-    Fast_MRI_train_loader =  DataLoader(dataset_train, batch_size=batch_size, shuffle=True,  drop_last=False)
-    Fast_MRI_test_loader  =  DataLoader(dataset_test , batch_size=batch_size, shuffle=True, drop_last=False)
+    Fast_MRI_train_loader =  DataLoader(dataset_train, batch_size=batch_size, shuffle=False,  drop_last=False)
+    Fast_MRI_test_loader  =  DataLoader(dataset_test , batch_size=batch_size, shuffle=False, drop_last=False)
     
     return Fast_MRI_train_loader, Fast_MRI_test_loader
 
